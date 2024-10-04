@@ -1,0 +1,66 @@
+// src/components/Contact.js
+import React, { useState } from 'react';
+
+const Contact = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [mobile, setMobile] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Add logic to handle form submission, e.g., sending data to an API
+        console.log({ name, email, mobile, message });
+        alert("Thank you for your message! We will get back to you shortly.");
+    };
+
+    return (
+        <div className="contact">
+            <header>
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Please fill out the form below.</p>
+            </header>
+
+            <form onSubmit={handleSubmit} className="contact-form">
+                <div>
+                    <label>Full Name:</label>
+                    <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label>Mobile Number:</label>
+                    <input
+                        type="text"
+                        value={mobile}
+                        onChange={(e) => setMobile(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label>Message:</label>
+                    <textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                    />
+                </div>
+                <button type="submit" className="btn">Submit</button>
+            </form>
+        </div>
+    );
+};
+
+export default Contact;

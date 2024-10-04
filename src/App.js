@@ -1,103 +1,70 @@
 import React from 'react';
 import './App.css';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './components/home';
+import About from './components/about';
+import Donations from './components/donations';
+import Poojas from './components/poojas';
+import Events from './components/events';
+import Contact from './components/contact';
 import templeLogo from './logo.png'; // Assuming logo is in assets folder
-import bannerImage from './banner.jpg'; // Replace with the path of your image
+import Gallery from './components/gallery';
+// import bannerImage from './banner.jpg'; // Replace with the path of your image
 
-function Home() {
+const App = () => {
   return (
-    <BrowserRouter>
-    <div>
-      {/* Header */}
-      <header className="header">
-        <img src={templeLogo} alt="Temple Logo" className="logo" />
-        <nav className="nav">
-          <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/poojas">Poojas</Link></li>
-          <li><Link to="/events">Events</Link></li>
-          <li><Link to="/donations">Donations</Link></li>
-          <li><Link to="/gallery">Gallery</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          </ul>
-        </nav>
-        <i className="fa fa-search" /> {/* Search Icon */}
-      </header>
+    <Router>
+      <div>
+        {/* Header */}
+        <header className="header">
+          <img src={templeLogo} alt="Temple Logo" className="logo" />
+          <nav className="nav">
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/donations">Donations</Link></li>
+              <li><Link to="/poojas">Poojas</Link></li>
+              <li><Link to="/events">Events</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
+              {/* <li><Link to="/poojas">Poojas</Link></li>
+                          <li><Link to="/events">Events</Link></li>
+                          <li><Link to="/donations">Donations</Link></li>
+                          <li><Link to="/gallery">Gallery</Link></li>
+                          <li><Link to="/contact">Contact Us</Link></li> */}
+            </ul>
+          </nav>
+        </header>
 
-      {/* Hero Section */}
-      <section className="hero">
-        <img src={bannerImage} alt="Temple Banner" className="banner" />
-        <div className="hero-text">
-          <h1>Welcome to Sri Prasanna Ganapathi Seva Charitable Trust</h1>
-          <div className="cta-buttons">
-            <Link to="/donations" className="btn">Donate Now</Link>
-            <Link to="/poojas" className="btn">Book Pooja</Link>
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/donations" element={<Donations />} />
+          <Route path="/poojas" element={<Poojas />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
+          {/* <Route path="/poojas" element={<Poojas />} />
+                  <Route path="/donations" element={<Donations />} />
+                  <Route path="/events" element={<Events />} />
+                  <Route path="/gallery" element={<Gallery />} />
+                  <Route path="/contact" element={<Contact />} /> */}
+        </Routes>
+        {/* Footer */}
+        <footer>
+          <p>Contact Info: 123 Temple Road, Bangalore, India</p>
+          <p>Email: info@temple.org | Phone: +91 9876543210</p>
+          <p>Follow us: Facebook | Instagram</p>
+          <div className="footer-links">
+            <Link to="/sitemap">Sitemap</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms & Conditions</Link>
           </div>
-        </div>
-      </section>
-
-      {/* About Temple Section */}
-      <section className="about">
-        <h2>About the Temple</h2>
-        <p>Our temple has been a spiritual center since 1999, bringing peace and prosperity to the community.</p>
-        <Link to="/about" className="link">Read More</Link>
-      </section>
-
-      {/* Upcoming Events */}
-      <section className="events">
-        <h2>Upcoming Events</h2>
-        <div className="event-cards">
-          {/* Example event card */}
-          <div className="event-card">
-            <h3>Ganesh Chaturthi</h3>
-            <p>Date: Sept 19, 2024</p>
-            <Link to="/events">More Details</Link>
-          </div>
-          {/* Add more event cards here */}
-        </div>
-      </section>
-
-      {/* Pooja Services Section */}
-      <section className="poojas">
-        <h2>Pooja Services</h2>
-        <p>We offer various poojas like Ganesh Homa, Abhisheka, and more.</p>
-        <Link to="/poojas" className="btn">View All Poojas</Link>
-      </section>
-
-      {/* Donate Section */}
-      <section className="donate">
-        <h2>Support the Temple</h2>
-        <p>Your donations help maintain the temple and fund community services.</p>
-        <Link to="/donations" className="btn">Donate Now</Link>
-      </section>
-
-      {/* Gallery Preview Section */}
-      <section className="gallery-preview">
-        <h2>Gallery</h2>
-        <div className="gallery-images">
-          {/* Sample images */}
-          <img src="path/to/image1.jpg" alt="Gallery Image 1" />
-          <img src="path/to/image2.jpg" alt="Gallery Image 2" />
-          {/* Add more images */}
-        </div>
-        <Link to="/gallery" className="link">View Gallery</Link>
-      </section>
-
-      {/* Footer */}
-      <footer>
-        <p>Contact Info: 123 Temple Road, Bangalore, India</p>
-        <p>Email: info@temple.org | Phone: +91 9876543210</p>
-        <p>Follow us: Facebook | Instagram</p>
-        <div className="footer-links">
-          <Link to="/sitemap">Sitemap</Link>
-          <Link to="/privacy">Privacy Policy</Link>
-          <Link to="/terms">Terms & Conditions</Link>
-        </div>
-      </footer>
-    </div>
-    </BrowserRouter>
+        </footer>
+      </div>
+    </Router>
   );
-}
+};
 
-export default Home;
+export default App;
