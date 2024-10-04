@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import image1 from '../gallery/1.jpg';
+import image2 from '../gallery/2.jpg';
 
 function Home() {
   return (
@@ -54,8 +56,8 @@ function Home() {
         <h2>Gallery</h2>
         <div className="gallery-images">
           {/* Sample images */}
-          <img src="path/to/image1.jpg" alt="Gallery Image 1" />
-          <img src="path/to/image2.jpg" alt="Gallery Image 2" />
+          <img src={image1} alt="Gallery Image 1" />
+          <img src={image2} alt="Gallery Image 2" />
           {/* Add more images */}
         </div>
         <Link to="/gallery" className="link">View Gallery</Link>
