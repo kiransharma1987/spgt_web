@@ -8,6 +8,9 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-images": "^1.2.0-beta.7",
+    "react-images-lightbox": "^0.5.6",
+    "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
