@@ -12,13 +12,15 @@ function Home() {
       <header className="header">
         <img src={templeLogo} alt="Temple Logo" className="logo" />
         <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/poojas">Poojas</Link>
-          <Link to="/events">Events</Link>
-          <Link to="/donations">Donations</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/contact">Contact Us</Link>
+          <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/poojas">Poojas</Link></li>
+          <li><Link to="/events">Events</Link></li>
+          <li><Link to="/donations">Donations</Link></li>
+          <li><Link to="/gallery">Gallery</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li>
+          </ul>
         </nav>
         <i className="fa fa-search" /> {/* Search Icon */}
       </header>
