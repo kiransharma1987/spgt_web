@@ -1,13 +1,10 @@
 import { Link } from 'react-router-dom';
-import bannerImage from '../banner.jpg'; // Replace with the path of your image
-// import Gallery from './components/gallery';
 
 function Home() {
   return (
     <div>
       {/* Hero Section */}
       <section className="hero">
-        <img src={bannerImage} alt="Temple Banner" className="banner" />
         <div className="hero-text">
           <h1>Welcome to Sri Prasanna Ganapathi Temple</h1>
           <div className="cta-buttons">

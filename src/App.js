@@ -9,7 +9,6 @@ import Events from './components/events';
 import Contact from './components/contact';
 import templeLogo from './logo.png'; // Assuming logo is in assets folder
 import Gallery from './components/gallery';
-// import bannerImage from './banner.jpg'; // Replace with the path of your image
 
 const App = () => {
   return (
@@ -18,6 +17,7 @@ const App = () => {
         {/* Header */}
         <header className="header">
           <img src={templeLogo} alt="Temple Logo" className="logo" />
+          <h1 className="logo-text">Sri Prasanna Ganapathi Seva Charitable Trust</h1>
           <nav className="nav">
             <ul>
               <li><Link to="/">Home</Link></li>
@@ -27,11 +27,6 @@ const App = () => {
               <li><Link to="/events">Events</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
               <li><Link to="/gallery">Gallery</Link></li>
-              {/* <li><Link to="/poojas">Poojas</Link></li>
-                          <li><Link to="/events">Events</Link></li>
-                          <li><Link to="/donations">Donations</Link></li>
-                          <li><Link to="/gallery">Gallery</Link></li>
-                          <li><Link to="/contact">Contact Us</Link></li> */}
             </ul>
           </nav>
         </header>
@@ -45,11 +40,6 @@ const App = () => {
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/gallery" element={<Gallery />} />
-          {/* <Route path="/poojas" element={<Poojas />} />
-                  <Route path="/donations" element={<Donations />} />
-                  <Route path="/events" element={<Events />} />
-                  <Route path="/gallery" element={<Gallery />} />
-                  <Route path="/contact" element={<Contact />} /> */}
         </Routes>
         {/* Footer */}
         <footer>
