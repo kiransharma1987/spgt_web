@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, ModalGateway } from 'react-images';
+// import './Gallery.css'; // Create this CSS file with the styles below
 import image3 from '../gallery/3.jpg';
 import image4 from '../gallery/4.jpg';
 import image5 from '../gallery/5.jpg';
@@ -8,53 +8,53 @@ import image7 from '../gallery/7.jpg';
 import image8 from '../gallery/8.jpg';
 import image9 from '../gallery/9.jpg';
 
-const Gallery = () => {
-  const [lightboxIsOpen, setLightboxIsOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(0);
-
-  const images = [
-    { src: image3 },
-    { src: image4 },
-    { src: image5 },
-    { src: image6 },
-    { src: image7 },
-    { src: image8 },
-    { src: image9 }
+const images = [
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9
   ];
 
-  const openLightbox = (index) => {
-    setCurrentImage(index);
-    setLightboxIsOpen(true);
+const Gallery = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
+
+  const openLightbox = (img) => {
+    setCurrentImage(img);
+    setIsOpen(true);
   };
 
   const closeLightbox = () => {
-    setLightboxIsOpen(false);
+    setIsOpen(false);
+    setCurrentImage(null);
   };
 
   return (
-    <div>
+    <div className="gallery-container">
+      <h2>Image Gallery</h2>
       <div className="gallery">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image.src}
-            alt={`Gallery Image ${index + 1}`}
-            onClick={() => openLightbox(index)}
-            className="gallery-image"
-          />
+        {images.map((img, index) => (
+          <div key={index} className="gallery-item">
+            <img
+              src={img}
+              alt={`Gallery Image ${index + 3}`}
+              onClick={() => openLightbox(img)}
+            />
+          </div>
         ))}
       </div>
 
-      <ModalGateway>
-        {lightboxIsOpen ? (
-          <Modal onClose={closeLightbox}>
-            <img
-              src={images[currentImage].src}
-              alt={`Gallery Image ${currentImage + 1}`}
-            />
-          </Modal>
-        ) : null}
-      </ModalGateway>
+      {isOpen && (
+        <div className="lightbox" onClick={closeLightbox}>
+          <div className="lightbox-content">
+            <span className="close">&times;</span>
+            <img className="lightbox-image" src={currentImage} alt="Large" />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

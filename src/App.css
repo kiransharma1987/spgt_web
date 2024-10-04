@@ -205,15 +205,74 @@ form button:hover {
   justify-content: center;
 }
 
-.gallery-image {
-  width: 30%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+/***********************/
+
+/* Gallery Container */
+.gallery-container {
+  padding: 20px;
+  text-align: center;
 }
 
-.gallery-image:hover {
-  transform: scale(1.05);
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border: 3px solid #ddd;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  border-color: #444;
+}
+
+/* Lightbox Styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+.lightbox-content {
+  position: relative;
+}
+
+.lightbox-image {
+  max-width: 30%;
+  max-height: 30%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #ff0000;
+}
+
+/***********************/
 
 button {
   background-color: #007bff;
