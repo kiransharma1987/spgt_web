@@ -25,8 +25,8 @@ const App = () => {
               <li><Link to="/donations">Donations</Link></li>
               <li><Link to="/poojas">Poojas</Link></li>
               <li><Link to="/events">Events</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
               <li><Link to="/gallery">Gallery</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </nav>
         </header>
@@ -38,8 +38,8 @@ const App = () => {
           <Route path="/donations" element={<Donations />} />
           <Route path="/poojas" element={<Poojas />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         {/* Footer */}
         <footer>
