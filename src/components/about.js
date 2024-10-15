@@ -1,17 +1,17 @@
 function About() {
   return (
-    <section id="about-us" class="about-us">
+
+
+    <section id="about-us" className="about-us">
       <h1>About Sri Prasanna Ganapathi Seva Charitable Trust</h1>
 
       <h2>1. Company's Journey</h2>
       <p>
-        Founded in 1985, Sri Prasanna Ganapathi Seva Charitable Trust has been a beacon of spiritual enlightenment and cultural preservation for over three decades. Our journey began with a small group of devoted individuals who envisioned a sacred space dedicated to Lord Ganesha. From humble beginnings, we have grown into a vibrant community hub, fostering religious understanding and cultural appreciation.
+        Founded in 1999, Sri Prasanna Ganapathi Seva Charitable Trust has been a beacon of spiritual enlightenment and cultural preservation for over three decades. Our journey began with a small group of devoted individuals who envisioned a sacred space dedicated to Lord Ganesha. From humble beginnings, we have grown into a vibrant community hub, fostering religious understanding and cultural appreciation.
       </p>
 
       <h2>2. Purpose and Goals</h2>
-      <p>
-        Our primary purpose is to serve as a spiritual sanctuary for devotees of Lord Ganesha while promoting Hindu traditions and values. We aim to:
-      </p>
+      <p>Our primary purpose is to serve as a spiritual sanctuary for devotees of Lord Ganesha while promoting Hindu traditions and values. We aim to:</p>
       <ul>
         <li>Provide a serene environment for worship and meditation</li>
         <li>Educate the community about Hindu philosophy and practices</li>
@@ -29,9 +29,7 @@ function About() {
         <li><strong>Dr. Anand Sharma</strong>: Education and outreach director</li>
         <li><strong>Ms. Priya Sundaram</strong>: Charitable initiatives lead</li>
       </ul>
-      <p>
-        Together, we work tirelessly to ensure that Sri Prasanna Ganapathi Seva Charitable Trust remains a pillar of spiritual and cultural excellence.
-      </p>
+      <p>Together, we work tirelessly to ensure that Sri Prasanna Ganapathi Seva Charitable Trust remains a pillar of spiritual and cultural excellence.</p>
 
       <h2>4. Offerings</h2>
       <p>We provide a wide range of services and activities:</p>
@@ -47,10 +45,10 @@ function About() {
 
       <h2>5. Customer Opinions</h2>
       <blockquote>
-        "Sri Prasanna Ganapathi Seva Charitable Trust is more than just a temple; it's a home away from home. The peaceful atmosphere and the warmth of the community make every visit a divine experience." - <strong>Ravi Krishnan, Regular Devotee</strong>
+        "Sri Prasanna Ganapathi Seva Charitable Trust is more than just a temple; it's a home away from home. The peaceful atmosphere and the warmth of the community make every visit a divine experience." - <strong>Ravi Krishnan</strong>, Regular Devotee
       </blockquote>
       <blockquote>
-        "The cultural programs organized by the trust are exceptional. My children have learned so much about our traditions through their engaging workshops." - <strong>Meera Patel, Parent</strong>
+        "The cultural programs organized by the trust are exceptional. My children have learned so much about our traditions through their engaging workshops." - <strong>Meera Patel</strong>, Parent
       </blockquote>
 
       <h2>6. Achievements</h2>
