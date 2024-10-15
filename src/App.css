@@ -1148,3 +1148,51 @@ h3 {
 #about-us strong {
   color: #007bff; /* Highlighting team members */
 }
+
+footer {
+  background-color: #2C3E50; /* Dark background color */
+  color: #ECF0F1; /* Light text color */
+  padding: 20px; /* Spacing inside the footer */
+  text-align: center; /* Center text alignment */
+  font-family: 'Open Sans', sans-serif; /* Font family */
+  position: relative; /* Position for potential overlapping elements */
+}
+
+footer p {
+  margin: 8px 0; /* Margin for spacing between paragraphs */
+  font-size: 14px; /* Font size for paragraph text */
+}
+
+.footer-links {
+  margin-top: 10px; /* Spacing above the links */
+}
+
+.footer-links a {
+  color: #ECF0F1; /* Link color */
+  text-decoration: none; /* Remove underline */
+  margin: 0 10px; /* Spacing between links */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer-links a:hover {
+  color: #3498DB; /* Change color on hover */
+}
+
+/* Optional: Add responsive styles */
+@media (max-width: 600px) {
+  footer {
+      padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  footer p {
+      font-size: 12px; /* Smaller font size on mobile */
+  }
+
+  .footer-links {
+      flex-direction: column; /* Stack links vertically */
+  }
+
+  .footer-links a {
+      margin: 5px 0; /* Margin for vertical links */
+  }
+}
