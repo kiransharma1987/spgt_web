@@ -44,7 +44,7 @@ const App = () => {
                 <Link to="/gallery"><a href="#gallery">Gallery</a></Link>
               </li>
               <li>
-                <Link to="/contact"><a href="#" className="button contact-us-button">Contact Us</a></Link>
+                <Link className="contact-us-button" to="/contact"><a href="#" className="button">Contact Us</a></Link>
               </li>
             </ul>
             <a href="#" className="mobile-toggle" onClick={toggleMobileMenu}>

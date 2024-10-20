@@ -1,1291 +1,1441 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-	--base: #555;
-	--base-100: #f1f1f1;
-	--base-400: #555;
-	--base-800: #000;
-	--yellow: #ffda4b;
-	--yellow-100: #fffbe6;
-	--yellow-400: #ffda4b;
-	--yellow-800: #8b6f00;
-	--blue: #0a61ae;
-	--blue-100: #e2f8ff;
-	--blue-400: #61dafb;
-	--blue-800: #0a61ae;
+    --base: #555;
+    --base-100: #f1f1f1;
+    --base-400: #555;
+    --base-800: #000;
+    --yellow: #ffda4b;
+    --yellow-100: #fffbe6;
+    --yellow-400: #ffda4b;
+    --yellow-800: #8b6f00;
+    --blue: #0a61ae;
+    --blue-100: #e2f8ff;
+    --blue-400: #61dafb;
+    --blue-800: #0a61ae;
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
-	font-optical-sizing: auto;
-	font-style: normal;
-	font-size: 20px;
-	/* padding-bottom: 1000px; */
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+    /* padding-bottom: 1000px; */
 }
 
 /* Smooth Scrolling for In-Page Links */
 html {
-	scroll-behavior: smooth;
-	/* Enables smooth scrolling for all anchor links */
+    scroll-behavior: smooth;
+    /* Enables smooth scrolling for all anchor links */
 }
 
 a {
-	text-decoration: none;
-	color: var(--blue);
+    text-decoration: none;
+    color: var(--blue);
 
-	&:hover {
-		text-decoration: underline;
-	}
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 header {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	display: flex;
-	justify-content: space-between;
-	max-width: 1440px;
-	margin: auto;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-	.logo-holder {
-		display: flex;
-		padding: 10px;
-		align-items: center;
-		font-weight: 600;
-		color: var(--base-800);
+    .logo-holder {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        font-weight: 600;
+        color: var(--base-800);
 
-		.logo {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 32px;
-			background-color: var(--base-800);
-			color: var(--base-100);
-			height: 64px;
-			width: 64px;
-			margin-right: 20px;
-			border-radius: 50%;
-		}
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            background-color: var(--base-800);
+            color: var(--base-100);
+            height: 64px;
+            width: 64px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
 
-		.logo-text {
-			flex: 1;
-		}
-	}
+        .logo-text {
+            flex: 1;
+        }
+    }
 
-	nav {
-		display: flex;
-		align-items: center;
+    nav {
+        display: flex;
+        align-items: center;
 
-		ul {
-			display: flex;
-			list-style-type: none;
-			gap: 5px;
+        ul {
+            display: flex;
+            list-style-type: none;
+            gap: 5px;
 
-			li {
-				display: inline-block;
+            li {
+                display: inline-block;
 
-				a {
-					display: inline-block;
-					padding: 5px 10px;
-					color: #3E362E;
-					background: var(--yellow);
-					border-radius: 10px;
+                a {
+                    display: inline-block;
+                    padding: 5px 10px;
+                    color: #3e362e;
+                    background: var(--yellow);
+                    border-radius: 10px;
 
-					&:hover {
-						background-color: var(--base-100);
-						border-radius: 10px;
-						text-decoration: none;
-					}
-				}
-			}
-		}
+                    &:hover {
+                        background-color: var(--base-100);
+                        border-radius: 10px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
 
-		.mobile-toggle {
-			display: none;
-			color: var(--base-800);
-			padding: 10px;
+        .mobile-toggle {
+            display: none;
+            color: var(--base-800);
+            padding: 10px;
 
-			@media (max-width: 768px) {
-				display: inline-block;
-				position: absolute;
-				top: 20px;
-				right: 20px;
-			}
-		}
-	}
+            @media (max-width: 768px) {
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+    }
 
-	@media (max-width: 1024px) {
-		flex-direction: column;
-		align-items: center;
-	}
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+    }
 
-	@media (max-width: 768px) {
-		flex-direction: column;
-		align-items: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
 
-		nav {
-			margin-top: 10px;
-			width: 100%;
+        nav {
+            margin-top: 10px;
+            width: 100%;
 
-			ul {
-				display: none;
-				flex-direction: column;
-				text-align: center;
-				width: 100%;
+            ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
 
-				a {
-					width: 100%;
-				}
+                a {
+                    width: 100%;
+                }
 
-				&.active {
-					display: flex;
-				}
-			}
-		}
-	}
+                &.active {
+                    display: flex;
+                }
+            }
+        }
+    }
 }
 
 section {
-	max-width: 1440px;
-	margin: auto;
-	gap: 30px;
-	margin-top: 30px;
-	margin-bottom: 30px;
+    max-width: 1440px;
+    margin: auto;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
-	@media (max-width: 1440px) {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
+    @media (max-width: 1440px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 .button {
-	display: inline-block;
-	padding: 10px 30px;
-	background-color: var(--blue);
-	color: var(--base-100);
-	border-radius: 10px;
-	transition: ease 0.3s all;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--blue);
+    color: var(--base-100);
+    border-radius: 10px;
+    transition: ease 0.3s all;
 
-	&:hover {
-		text-decoration: none;
-		background-color: var(--base-800);
-	}
+    &:hover {
+        text-decoration: none;
+        background-color: var(--base-800);
+    }
 
-	&.white {
-		background-color: white;
-		color: var(--base-800);
+    &.white {
+        background-color: white;
+        color: var(--base-800);
 
-		&:hover {
-			background-color: var(--base-100);
-			color: var(--base);
-		}
-	}
+        &:hover {
+            background-color: var(--base-100);
+            color: var(--base);
+        }
+    }
 
-	&.black {
-		background-color: black;
-		color: white;
+    &.black {
+        background-color: black;
+        color: white;
 
-		&:hover {
-			background-color: var(--base);
-			color: var(--base-100);
-		}
-	}
+        &:hover {
+            background-color: var(--base);
+            color: var(--base-100);
+        }
+    }
 }
 
 h1 {
-	font-size: 64px;
-	line-height: 1;
-	margin-bottom: 10px;
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 10px;
 
-	small {
-		display: block;
-		font-weight: 100;
-	}
+    small {
+        display: block;
+        font-weight: 100;
+    }
 
-	@media (max-width: 1024px) {
-		font-size: 48px;
-	}
+    @media (max-width: 1024px) {
+        font-size: 48px;
+    }
 }
 
 .hero {
-	display: flex;
+    display: flex;
 
-	@media (max-width: 1024px) {
-		flex-direction: column;
-	}
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
 
-	.hero-blue {
-		flex: 1;
-		background-color: var(--blue-100);
-		border-radius: 30px;
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+    .hero-blue {
+        flex: 1;
+        background-color: var(--blue-100);
+        border-radius: 30px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-		span {
-			@media (max-width: 768px) {
-				display: none;
-			}
-		}
+        span {
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
 
-		.call-to-action {
-			margin-top: 20px;
-			margin-bottom: 10px;
+        .call-to-action {
+            margin-top: 20px;
+            margin-bottom: 10px;
 
-			a {
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}
-		}
+            a {
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
 
-		.social-links {
-			a {
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
-	}
+        .social-links {
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 
-	.hero-yellow {
-		flex: 1;
-		background-color: var(--yellow);
-		border-radius: 30px;
-		padding: 0px 30px;
-		display: flex;
-		justify-content: center;
-		align-items: flex-end;
+    .hero-yellow {
+        flex: 1;
+        background-color: var(--yellow);
+        border-radius: 30px;
+        padding: 0px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
 
-		img {
-			margin-top: -60px;
-			max-width: 420px;
-			margin-bottom: -10px;
-		}
-	}
+        img {
+            margin-top: -60px;
+            max-width: 420px;
+            margin-bottom: -10px;
+        }
+    }
 }
 
 h2 {
-	font-size: 64px;
-	line-height: 1;
-	margin-bottom: 10px;
-	text-align: center;
-	color: var(--base-800);
-	padding: 30px;
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--base-800);
+    padding: 30px;
 
-	small {
-		display: block;
-		font-weight: 100;
-		font-size: 0.5em;
-		color: var(--base);
-	}
+    small {
+        display: block;
+        font-weight: 100;
+        font-size: 0.5em;
+        color: var(--base);
+    }
 
-	@media (max-width: 1024px) {
-		font-size: 48px;
-	}
+    @media (max-width: 1024px) {
+        font-size: 48px;
+    }
 }
 
 h3 {
-	font-size: 32px;
-	font-weight: 600;
-	line-height: 1;
-	margin-bottom: 20px;
-	color: var(--base-800);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: var(--base-800);
 }
 
 .skills {
-	.holder-blue {
-		background-color: var(--blue-100);
-		border-radius: 30px;
-		padding: 30px;
-		display: flex;
+    .holder-blue {
+        background-color: var(--blue-100);
+        border-radius: 30px;
+        padding: 30px;
+        display: flex;
 
-		@media (max-width: 1024px) {
-			flex-direction: column;
-		}
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
 
-		.left-column {
-			flex: 1;
+        .left-column {
+            flex: 1;
 
-			ul {
-				list-style-type: none;
-				gap: 10px;
-				margin-right: 100px;
-				margin-bottom: 20px;
+            ul {
+                list-style-type: none;
+                gap: 10px;
+                margin-right: 100px;
+                margin-bottom: 20px;
 
-				li {
-					display: inline-block;
-					background-color: var(--blue-400);
-					padding: 10px 20px;
-					border-radius: 15px;
-					margin-bottom: 10px;
-				}
-			}
-		}
+                li {
+                    display: inline-block;
+                    background-color: var(--blue-400);
+                    padding: 10px 20px;
+                    border-radius: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
 
-		.right-column {
-			flex: 1;
+        .right-column {
+            flex: 1;
 
-			p {
-				margin-bottom: 20px;
-			}
-		}
-	}
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 
 .work-experience {
-	.jobs {
-		display: flex;
-		gap: 30px;
+    .jobs {
+        display: flex;
+        gap: 30px;
 
-		@media (max-width: 1024px) {
-			flex-direction: column;
-		}
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
 
-		article {
-			background-color: var(--yellow-100);
-			padding: 30px;
-			border-radius: 30px;
-			flex: 1;
+        article {
+            background-color: var(--yellow-100);
+            padding: 30px;
+            border-radius: 30px;
+            flex: 1;
 
-			h3 {
-				margin-top: 20px;
-				margin-bottom: 10px;
-			}
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
 
-			div {
-				font-weight: 600;
-				margin-bottom: 5px;
-				color: var(--base-800);
-			}
+            div {
+                font-weight: 600;
+                margin-bottom: 5px;
+                color: var(--base-800);
+            }
 
-			p {
-				margin-bottom: 10px;
-			}
+            p {
+                margin-bottom: 10px;
+            }
 
-			figure {
-				width: 100%;
-				padding-top: 56.25%;
-				overflow: hidden;
-				position: relative;
-				border-radius: 15px;
+            figure {
+                width: 100%;
+                padding-top: 56.25%;
+                overflow: hidden;
+                position: relative;
+                border-radius: 15px;
 
-				img {
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					object-fit: cover;
-					transition: ease 3s all;
-				}
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: ease 3s all;
+                }
 
-				figcaption {
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					background-color: rgba(0, 0, 0, 0.5);
-					color: var(--base-100);
-					text-align: center;
-					padding: 10px;
-					opacity: 0;
-					visibility: hidden;
-					transition: ease 0.3s all;
-				}
+                figcaption {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: var(--base-100);
+                    text-align: center;
+                    padding: 10px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: ease 0.3s all;
+                }
 
-				&:hover {
-					figcaption {
-						opacity: 1;
-						visibility: visible;
-					}
+                &:hover {
+                    figcaption {
+                        opacity: 1;
+                        visibility: visible;
+                    }
 
-					img {
-						transform: scale(1.2);
-					}
-				}
-			}
-		}
-	}
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .bento {
-	.bento-grid {
-		display: grid;
-		grid-gap: 30px;
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(4, 1fr);
-		height: 960px;
+    .bento-grid {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        height: 960px;
 
-		@media (max-width: 1024px) {
-			grid-template-rows: repeat(8, 1fr);
-		}
+        @media (max-width: 1024px) {
+            grid-template-rows: repeat(8, 1fr);
+        }
 
-		@media (max-width: 768px) {
-			display: flex;
-			flex-direction: column;
-			gap: 30px;
-			height: auto;
-		}
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            height: auto;
+        }
 
-		.bento-item {
-			padding: 30px;
-			background-color: var(--base-100);
-			border-radius: 15px;
-			position: relative;
-			overflow: hidden;
+        .bento-item {
+            padding: 30px;
+            background-color: var(--base-100);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
 
-			img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 100%;
-				object-fit: cover;
-				transition: ease 3s all;
-			}
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                object-fit: cover;
+                transition: ease 3s all;
+            }
 
-			&:hover {
-				img {
-					transform: scale(1.2);
-				}
-			}
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+            }
 
-			@media (max-width: 768px) {
-				height: 240px;
-			}
+            @media (max-width: 768px) {
+                height: 240px;
+            }
 
-			&:nth-child(1) {
-				grid-column: span 2;
-				grid-row: span 2;
+            &:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 2;
 
-				@media (max-width: 1024px) {
-					grid-column: span 2;
-					grid-row: span 2;
-				}
-			}
+                @media (max-width: 1024px) {
+                    grid-column: span 2;
+                    grid-row: span 2;
+                }
+            }
 
-			&:nth-child(2) {
-				grid-column: span 2;
-				grid-row: span 1;
+            &:nth-child(2) {
+                grid-column: span 2;
+                grid-row: span 1;
 
-				@media (max-width: 1024px) {
-					grid-column: span 3;
-					grid-row: span 2;
-				}
-			}
+                @media (max-width: 1024px) {
+                    grid-column: span 3;
+                    grid-row: span 2;
+                }
+            }
 
-			&:nth-child(3) {
-				grid-column: span 1;
-				grid-row: span 1;
+            &:nth-child(3) {
+                grid-column: span 1;
+                grid-row: span 1;
 
-				@media (max-width: 1024px) {
-					grid-column: span 3;
-					grid-row: span 2;
-				}
-			}
+                @media (max-width: 1024px) {
+                    grid-column: span 3;
+                    grid-row: span 2;
+                }
+            }
 
-			&:nth-child(4) {
-				grid-column: span 1;
-				grid-row: span 1;
+            &:nth-child(4) {
+                grid-column: span 1;
+                grid-row: span 1;
 
-				@media (max-width: 1024px) {
-					grid-column: span 2;
-					grid-row: span 4;
-				}
-			}
+                @media (max-width: 1024px) {
+                    grid-column: span 2;
+                    grid-row: span 4;
+                }
+            }
 
-			&:nth-child(5) {
-				grid-column: span 2;
-				grid-row: span 1;
+            &:nth-child(5) {
+                grid-column: span 2;
+                grid-row: span 1;
 
-				@media (max-width: 1024px) {
-					grid-column: span 3;
-					grid-row: span 2;
-				}
-			}
+                @media (max-width: 1024px) {
+                    grid-column: span 3;
+                    grid-row: span 2;
+                }
+            }
 
-			&:nth-child(6) {
-				grid-column: span 5;
-				grid-row: span 3;
+            &:nth-child(6) {
+                grid-column: span 5;
+                grid-row: span 3;
 
-				@media (max-width: 1024px) {
-					grid-column: span 5;
-					grid-row: span 2;
-				}
-			}
-		}
-	}
+                @media (max-width: 1024px) {
+                    grid-column: span 5;
+                    grid-row: span 2;
+                }
+            }
+        }
+    }
 }
 
 .chatbot {
-	.chatbot-blue {
-		background-color: var(--blue-100);
-		border-radius: 30px;
-		padding: 30px;
-		gap: 30px;
-		display: flex;
+    .chatbot-blue {
+        background-color: var(--blue-100);
+        border-radius: 30px;
+        padding: 30px;
+        gap: 30px;
+        display: flex;
 
-		@media (max-width: 1024px) {
-			flex-direction: column;
-		}
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
 
-		p {
-			margin-bottom: 30px;
-		}
+        p {
+            margin-bottom: 30px;
+        }
 
-		.chat-info {
-			flex: 3;
-			padding-right: 30px;
-		}
+        .chat-info {
+            flex: 3;
+            padding-right: 30px;
+        }
 
-		.chat-box {
-			flex: 4;
-			background: white;
-			border-radius: 15px;
-			padding: 30px;
-			display: flex;
-			flex-direction: column;
+        .chat-box {
+            flex: 4;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
 
-			.scroll-area {
-				max-height: 300px;
-				height: 300px;
-				overflow-y: scroll;
+            .scroll-area {
+                max-height: 300px;
+                height: 300px;
+                overflow-y: scroll;
 
-				ul {
-					display: flex;
-					flex-direction: column;
-					justify-content: flex-end;
-					gap: 15px;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    gap: 15px;
 
-					li {
-						display: flex;
-						align-items: center;
-						gap: 15px;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
 
-						&:nth-child(even) {
-							text-align: right;
-							justify-content: flex-end;
-							flex-direction: row-reverse;
+                        &:nth-child(even) {
+                            text-align: right;
+                            justify-content: flex-end;
+                            flex-direction: row-reverse;
 
-							span {
-								background-color: var(--yellow);
-							}
-						}
+                            span {
+                                background-color: var(--yellow);
+                            }
+                        }
 
-						span {
-							background-color: var(--blue-400);
-							width: 64px;
-							height: 64px;
-							border-radius: 50%;
-							display: inline-flex;
-							align-items: center;
-							justify-content: center;
+                        span {
+                            background-color: var(--blue-400);
+                            width: 64px;
+                            height: 64px;
+                            border-radius: 50%;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
 
-							@media (max-width: 768px) {
-								width: 48px;
-								height: 48px;
-							}
-						}
+                            @media (max-width: 768px) {
+                                width: 48px;
+                                height: 48px;
+                            }
+                        }
 
-						div {
-							flex: 1;
-						}
-					}
-				}
-			}
+                        div {
+                            flex: 1;
+                        }
+                    }
+                }
+            }
 
-			.chat-message {
-				display: flex;
-				margin-top: 15px;
-				gap: 15px;
+            .chat-message {
+                display: flex;
+                margin-top: 15px;
+                gap: 15px;
 
-				input {
-					border-radius: 10px;
-					flex: 1;
-					padding: 15px;
-					border: 1px solid transparent;
-					background-color: var(--base-100);
+                input {
+                    border-radius: 10px;
+                    flex: 1;
+                    padding: 15px;
+                    border: 1px solid transparent;
+                    background-color: var(--base-100);
 
-					&:hover {
-						outline: none;
-						background-color: white;
-						border: 1px solid var(--base-100);
-					}
+                    &:hover {
+                        outline: none;
+                        background-color: white;
+                        border: 1px solid var(--base-100);
+                    }
 
-					&:focus {
-						outline: none;
-						background-color: white;
-						border: 1px solid var(--base-100);
-					}
-				}
+                    &:focus {
+                        outline: none;
+                        background-color: white;
+                        border: 1px solid var(--base-100);
+                    }
+                }
 
-				button {
-					border: none;
-					cursor: pointer;
-				}
-			}
-		}
-	}
+                button {
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
 
 .events-wrapper {
-	overflow: hidden;
-	/* Hide overflow */
-	width: 100%;
-	/* Full width */
-	position: relative;
-	/* Relative positioning */
-	white-space: nowrap;
-	/* Prevent wrapping */
+    overflow: hidden;
+    /* Hide overflow */
+    width: 100%;
+    /* Full width */
+    position: relative;
+    /* Relative positioning */
+    white-space: nowrap;
+    /* Prevent wrapping */
 }
 
 .events-grid {
-	display: inline-block;
-	/* Inline block for horizontal layout */
-	animation: scroll 20s linear infinite;
-	/* Continuous scroll */
+    display: inline-block;
+    /* Inline block for horizontal layout */
+    animation: scroll 20s linear infinite;
+    /* Continuous scroll */
 }
 
 .event-card {
-	display: inline-block;
-	/* Inline block for cards */
-	width: 300px;
-	/* Fixed width for cards */
-	background-color: #fff;
-	/* White background */
-	border: 1px solid #ddd;
-	/* Border */
-	border-radius: 10px;
-	/* Rounded corners */
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	/* Shadow */
-	padding: 20px;
-	/* Inner padding */
-	margin: 10px;
-	/* Margin around cards */
-	vertical-align: top;
-	/* Align cards to top */
+    display: inline-block;
+    /* Inline block for cards */
+    width: 300px;
+    /* Fixed width for cards */
+    background-color: #fff;
+    /* White background */
+    border: 1px solid #ddd;
+    /* Border */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Shadow */
+    padding: 20px;
+    /* Inner padding */
+    margin: 10px;
+    /* Margin around cards */
+    vertical-align: top;
+    /* Align cards to top */
 }
 
 .card-content {
-	display: flex;
-	/* Flexbox for layout */
-	flex-direction: column;
-	/* Vertical layout */
-	justify-content: space-between;
-	/* Space out content */
-	height: 100%;
-	/* Full height for card content */
+    display: flex;
+    /* Flexbox for layout */
+    flex-direction: column;
+    /* Vertical layout */
+    justify-content: space-between;
+    /* Space out content */
+    height: 100%;
+    /* Full height for card content */
 }
 
 .card-title {
-	font-size: 20px;
-	/* Title size */
-	font-weight: bold;
-	/* Bold title */
-	margin-bottom: 10px;
-	/* Bottom margin */
-	display: -webkit-box;
-	/* For ellipsis */
-	-webkit-box-orient: vertical;
-	/* Vertical layout */
-	-webkit-line-clamp: 2;
-	/* Max lines */
-	overflow: hidden;
-	/* Hide overflow */
-	text-overflow: ellipsis;
-	/* Ellipsis */
-	white-space: normal;
-	/* Normal whitespace */
+    font-size: 20px;
+    /* Title size */
+    font-weight: bold;
+    /* Bold title */
+    margin-bottom: 10px;
+    /* Bottom margin */
+    display: -webkit-box;
+    /* For ellipsis */
+    -webkit-box-orient: vertical;
+    /* Vertical layout */
+    -webkit-line-clamp: 2;
+    /* Max lines */
+    overflow: hidden;
+    /* Hide overflow */
+    text-overflow: ellipsis;
+    /* Ellipsis */
+    white-space: normal;
+    /* Normal whitespace */
 }
 
 .card-text {
-	font-size: 16px;
-	/* Text size */
-	margin-bottom: 20px;
-	/* Bottom margin */
+    font-size: 16px;
+    /* Text size */
+    margin-bottom: 20px;
+    /* Bottom margin */
 }
 
 .card-button {
-	background-color: #4caf50;
-	/* Button color */
-	color: #fff;
-	/* Text color */
-	padding: 10px 20px;
-	/* Padding */
-	border: none;
-	/* No border */
-	border-radius: 5px;
-	/* Rounded corners */
-	cursor: pointer;
-	/* Pointer cursor */
-	align-self: flex-end;
-	/* Align to bottom */
+    background-color: #4caf50;
+    /* Button color */
+    color: #fff;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor */
+    align-self: flex-end;
+    /* Align to bottom */
 }
 
 .card-button:hover {
-	background-color: #3e8e41;
-	/* Darker green on hover */
-	text-decoration: none;
-	/* Ensure no underline on hover */
+    background-color: #3e8e41;
+    /* Darker green on hover */
+    text-decoration: none;
+    /* Ensure no underline on hover */
 }
 
 /* Keyframes for scrolling effect */
 @keyframes scroll {
-	0% {
-		transform: translateX(0);
-		/* Start position */
-	}
+    0% {
+        transform: translateX(0);
+        /* Start position */
+    }
 
-	100% {
-		transform: translateX(-50%);
-		/* Scroll left */
-	}
+    100% {
+        transform: translateX(-50%);
+        /* Scroll left */
+    }
 }
 
 /* Pause on hover */
 .events-wrapper:hover .events-grid {
-	animation-play-state: paused;
-	/* Pause animation */
+    animation-play-state: paused;
+    /* Pause animation */
 }
 
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
-	.event-card {
-		width: 250px;
-		/* Responsive card width */
-	}
+    .event-card {
+        width: 250px;
+        /* Responsive card width */
+    }
 }
 
 @media only screen and (max-width: 480px) {
-	.event-card {
-		width: 200px;
-		/* Smaller card width */
-	}
+    .event-card {
+        width: 200px;
+        /* Smaller card width */
+    }
 }
 
 /* Container for all pooja cards */
 .pooja-grid {
-	display: flex;
-	/* Use flexbox for layout */
-	flex-wrap: wrap;
-	/* Allow cards to wrap onto the next line */
-	justify-content: center;
-	/* Center the cards in the grid */
-	gap: 20px;
-	/* Space between cards */
-	padding: 20px;
-	/* Padding around the grid */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow cards to wrap onto the next line */
+    justify-content: center;
+    /* Center the cards in the grid */
+    gap: 20px;
+    /* Space between cards */
+    padding: 20px;
+    /* Padding around the grid */
 }
 
 /* Individual pooja card styles */
 .pooja-card {
-	background-color: #fff;
-	/* White background for cards */
-	border: 1px solid #ddd;
-	/* Light gray border */
-	border-radius: 10px;
-	/* Rounded corners */
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	/* Subtle shadow for depth */
-	transition: transform 0.2s;
-	/* Smooth scale effect on hover */
-	display: flex;
-	/* Flexbox for card layout */
-	flex-direction: column;
-	/* Stack children vertically */
-	justify-content: space-between;
-	/* Space content between top and bottom */
-	width: 300px;
-	/* Fixed width for cards */
-	height: 250px;
-	/* Adjusted height for cards */
-	padding: 20px;
-	/* Padding similar to event cards */
-	overflow: hidden;
-	/* Prevent overflow */
+    background-color: #fff;
+    /* White background for cards */
+    border: 1px solid #ddd;
+    /* Light gray border */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: transform 0.2s;
+    /* Smooth scale effect on hover */
+    display: flex;
+    /* Flexbox for card layout */
+    flex-direction: column;
+    /* Stack children vertically */
+    justify-content: space-between;
+    /* Space content between top and bottom */
+    width: 300px;
+    /* Fixed width for cards */
+    height: 250px;
+    /* Adjusted height for cards */
+    padding: 20px;
+    /* Padding similar to event cards */
+    overflow: hidden;
+    /* Prevent overflow */
 }
 
 /* Title styles */
 .pooja-card h3 {
-	font-size: 18px;
-	/* Font size for title */
-	margin: 0 0 10px 0;
-	/* Space above and below title */
-	line-height: 1.2;
-	/* Line height for readability */
-	overflow: hidden;
-	/* Prevent overflow */
-	text-overflow: ellipsis;
-	/* Show ellipsis for overflow */
-	white-space: nowrap;
-	/* Prevent text wrapping */
+    font-size: 18px;
+    /* Font size for title */
+    margin: 0 0 10px 0;
+    /* Space above and below title */
+    line-height: 1.2;
+    /* Line height for readability */
+    overflow: hidden;
+    /* Prevent overflow */
+    text-overflow: ellipsis;
+    /* Show ellipsis for overflow */
+    white-space: nowrap;
+    /* Prevent text wrapping */
 }
 
 /* Text styles for the description */
 .pooja-card p {
-	font-size: 14px;
-	/* Font size for description */
-	margin: 5px 0;
-	/* Space above and below description */
-	line-height: 1.5;
-	/* Line height for readability */
-	flex-grow: 1;
-	/* Allow text to grow */
+    font-size: 14px;
+    /* Font size for description */
+    margin: 5px 0;
+    /* Space above and below description */
+    line-height: 1.5;
+    /* Line height for readability */
+    flex-grow: 1;
+    /* Allow text to grow */
 }
 
 /* Button styles */
 .pooja-card .btn {
-	background-color: #4caf50;
-	/* Green background for button */
-	color: #fff;
-	/* White text color */
-	padding: 10px;
-	/* Padding for button */
-	border: none;
-	/* No border */
-	border-radius: 5px;
-	/* Rounded corners */
-	cursor: pointer;
-	/* Pointer cursor on hover */
-	text-align: center;
-	/* Center text in button */
-	text-decoration: none;
-	/* Remove underline from text */
-	margin-top: 10px;
-	/* Space between content and button */
-	transition: background-color 0.3s;
-	/* Smooth transition for hover */
+    background-color: #4caf50;
+    /* Green background for button */
+    color: #fff;
+    /* White text color */
+    padding: 10px;
+    /* Padding for button */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    text-align: center;
+    /* Center text in button */
+    text-decoration: none;
+    /* Remove underline from text */
+    margin-top: 10px;
+    /* Space between content and button */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover */
 }
 
 /* Button hover effect */
 .pooja-card .btn:hover {
-	background-color: #3e8e41;
-	/* Darker green on hover */
+    background-color: #3e8e41;
+    /* Darker green on hover */
 }
 
 /* Responsive design */
 @media only screen and (max-width: 768px) {
-	.pooja-card {
-		width: 100%;
-		/* Full width on smaller screens */
-		height: auto;
-		/* Auto height for flexibility */
-	}
+    .pooja-card {
+        width: 100%;
+        /* Full width on smaller screens */
+        height: auto;
+        /* Auto height for flexibility */
+    }
 }
 
 @media only screen and (max-width: 480px) {
-	.pooja-card {
-		padding: 10px;
-		/* Smaller padding on mobile */
-	}
+    .pooja-card {
+        padding: 10px;
+        /* Smaller padding on mobile */
+    }
 
-	.pooja-card h3 {
-		font-size: 16px;
-		/* Smaller title on mobile */
-	}
+    .pooja-card h3 {
+        font-size: 16px;
+        /* Smaller title on mobile */
+    }
 
-	.pooja-card p {
-		font-size: 12px;
-		/* Smaller text on mobile */
-	}
+    .pooja-card p {
+        font-size: 12px;
+        /* Smaller text on mobile */
+    }
 
-	.pooja-card .btn {
-		padding: 8px;
-		/* Smaller button padding */
-	}
+    .pooja-card .btn {
+        padding: 8px;
+        /* Smaller button padding */
+    }
 }
 
 /* Container for donations section */
 .donations-section {
-	padding: 40px 20px;
-	/* Padding around the section */
-	background-color: #f9f9f9;
-	/* Light background for the section */
-	text-align: center;
-	/* Centered text */
+    padding: 40px 20px;
+    /* Padding around the section */
+    background-color: #f9f9f9;
+    /* Light background for the section */
+    text-align: center;
+    /* Centered text */
 }
 
 /* Title and paragraph styles */
 .donations-section h2 {
-	font-size: 28px;
-	/* Font size for title */
-	margin-bottom: 20px;
-	/* Space below the title */
+    font-size: 28px;
+    /* Font size for title */
+    margin-bottom: 20px;
+    /* Space below the title */
 }
 
 .donations-section p {
-	font-size: 16px;
-	/* Font size for description */
-	margin-bottom: 30px;
-	/* Space below the paragraph */
+    font-size: 16px;
+    /* Font size for description */
+    margin-bottom: 30px;
+    /* Space below the paragraph */
 }
 
 /* Donation options container */
 .donation-options {
-	display: flex;
-	/* Use flexbox for layout */
-	flex-wrap: wrap;
-	/* Allow wrapping of cards */
-	justify-content: center;
-	/* Center cards in the container */
-	gap: 20px;
-	/* Space between cards */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow wrapping of cards */
+    justify-content: center;
+    /* Center cards in the container */
+    gap: 20px;
+    /* Space between cards */
 }
 
 /* Individual donation card styles */
 .donation-card {
-	background-color: #fff;
-	/* White background for cards */
-	border: 1px solid #ddd;
-	/* Light gray border */
-	border-radius: 10px;
-	/* Rounded corners */
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	/* Subtle shadow for depth */
-	transition: transform 0.2s;
-	/* Smooth scale effect on hover */
-	display: flex;
-	/* Flexbox for card layout */
-	flex-direction: column;
-	/* Stack children vertically */
-	justify-content: space-between;
-	/* Space content between top and bottom */
-	width: 300px;
-	/* Fixed width for cards */
-	height: 250px;
-	/* Adjusted height for cards */
-	padding: 20px;
-	/* Padding inside the card */
-	overflow: hidden;
-	/* Prevent overflow */
+    background-color: #fff;
+    /* White background for cards */
+    border: 1px solid #ddd;
+    /* Light gray border */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: transform 0.2s;
+    /* Smooth scale effect on hover */
+    display: flex;
+    /* Flexbox for card layout */
+    flex-direction: column;
+    /* Stack children vertically */
+    justify-content: space-between;
+    /* Space content between top and bottom */
+    width: 300px;
+    /* Fixed width for cards */
+    height: 250px;
+    /* Adjusted height for cards */
+    padding: 20px;
+    /* Padding inside the card */
+    overflow: hidden;
+    /* Prevent overflow */
 }
 
 /* Title styles for donation cards */
 .donation-card h3 {
-	font-size: 20px;
-	/* Font size for title */
-	margin: 0 0 10px 0;
-	/* Space above and below title */
-	line-height: 1.2;
-	/* Line height for readability */
-	overflow: hidden;
-	/* Prevent overflow */
-	text-overflow: ellipsis;
-	/* Show ellipsis for overflow */
-	white-space: nowrap;
-	/* Prevent text wrapping */
+    font-size: 20px;
+    /* Font size for title */
+    margin: 0 0 10px 0;
+    /* Space above and below title */
+    line-height: 1.2;
+    /* Line height for readability */
+    overflow: hidden;
+    /* Prevent overflow */
+    text-overflow: ellipsis;
+    /* Show ellipsis for overflow */
+    white-space: nowrap;
+    /* Prevent text wrapping */
 }
 
 /* Text styles for the donation card description */
 .donation-card p {
-	font-size: 14px;
-	/* Font size for description */
-	margin: 5px 0;
-	/* Space above and below description */
-	line-height: 1.5;
-	/* Line height for readability */
-	flex-grow: 1;
-	/* Allow text to grow */
+    font-size: 14px;
+    /* Font size for description */
+    margin: 5px 0;
+    /* Space above and below description */
+    line-height: 1.5;
+    /* Line height for readability */
+    flex-grow: 1;
+    /* Allow text to grow */
 }
 
 /* Button styles */
 .donation-card .btn {
-	background-color: #4caf50;
-	/* Green background for button */
-	color: #fff;
-	/* White text color */
-	padding: 10px;
-	/* Padding for button */
-	border: none;
-	/* No border */
-	border-radius: 5px;
-	/* Rounded corners */
-	cursor: pointer;
-	/* Pointer cursor on hover */
-	text-align: center;
-	/* Center text in button */
-	text-decoration: none;
-	/* Remove underline from text */
-	margin-top: 10px;
-	/* Space between content and button */
-	transition: background-color 0.3s;
-	/* Smooth transition for hover */
+    background-color: #4caf50;
+    /* Green background for button */
+    color: #fff;
+    /* White text color */
+    padding: 10px;
+    /* Padding for button */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    text-align: center;
+    /* Center text in button */
+    text-decoration: none;
+    /* Remove underline from text */
+    margin-top: 10px;
+    /* Space between content and button */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover */
 }
 
 /* Button hover effect */
 .donation-card .btn:hover {
-	background-color: #3e8e41;
-	/* Darker green on hover */
+    background-color: #3e8e41;
+    /* Darker green on hover */
 }
 
 /* CTA section styles */
 .cta {
-	margin-top: 40px;
-	/* Space above the CTA section */
-	font-size: 16px;
-	/* Font size for CTA text */
+    margin-top: 40px;
+    /* Space above the CTA section */
+    font-size: 16px;
+    /* Font size for CTA text */
 }
 
 /* Scroll to Top Button Styles */
 #scrollTopBtn {
-	display: none;
-	/* Hidden by default */
-	position: fixed;
-	/* Fixed position */
-	bottom: 30px;
-	/* 30px from the bottom */
-	right: 30px;
-	/* 30px from the right */
-	z-index: 1000;
-	/* Ensure it's above other elements */
-	font-size: 24px;
-	/* Size of the arrow */
-	background-color: var(--blue);
-	/* Background color */
-	color: var(--base-100);
-	/* Arrow color */
-	padding: 15px;
-	/* Padding around the arrow */
-	border-radius: 50%;
-	/* Circular button */
-	text-align: center;
-	/* Center the arrow */
-	cursor: pointer;
-	/* Pointer cursor on hover */
-	transition: opacity 0.3s ease, visibility 0.3s ease;
-	/* Smooth transitions */
-	opacity: 0;
-	/* Transparent by default */
-	visibility: hidden;
-	/* Hidden by default */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed position */
+    bottom: 30px;
+    /* 30px from the bottom */
+    right: 30px;
+    /* 30px from the right */
+    z-index: 1000;
+    /* Ensure it's above other elements */
+    font-size: 24px;
+    /* Size of the arrow */
+    background-color: var(--blue);
+    /* Background color */
+    color: var(--base-100);
+    /* Arrow color */
+    padding: 15px;
+    /* Padding around the arrow */
+    border-radius: 50%;
+    /* Circular button */
+    text-align: center;
+    /* Center the arrow */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Smooth transitions */
+    opacity: 0;
+    /* Transparent by default */
+    visibility: hidden;
+    /* Hidden by default */
 }
 
 #scrollTopBtn.show {
-	display: block;
-	/* Show the button */
-	opacity: 0.7;
-	/* Slightly visible */
-	visibility: visible;
-	/* Make it visible */
+    display: block;
+    /* Show the button */
+    opacity: 0.7;
+    /* Slightly visible */
+    visibility: visible;
+    /* Make it visible */
 }
 
 #scrollTopBtn:hover {
-	background-color: var(--blue-800);
-	/* Darker background on hover */
-	opacity: 1;
-	/* Fully opaque on hover */
-	text-decoration: none;
+    background-color: var(--blue-800);
+    /* Darker background on hover */
+    opacity: 1;
+    /* Fully opaque on hover */
+    text-decoration: none;
 }
 
 /* Optional: Style the Font Awesome icon */
 #scrollTopBtn i {
-	pointer-events: none;
-	/* Allows click through the icon to the parent */
+    pointer-events: none;
+    /* Allows click through the icon to the parent */
 }
 
 /* Responsive design */
 @media only screen and (max-width: 768px) {
-	.donation-card {
-		width: 100%;
-		/* Full width on smaller screens */
-		height: auto;
-		/* Auto height for flexibility */
-	}
+    .donation-card {
+        width: 100%;
+        /* Full width on smaller screens */
+        height: auto;
+        /* Auto height for flexibility */
+    }
 }
 
 @media only screen and (max-width: 480px) {
-	.donation-card {
-		padding: 15px;
-		/* Smaller padding on mobile */
-	}
+    .donation-card {
+        padding: 15px;
+        /* Smaller padding on mobile */
+    }
 
-	.donation-card h3 {
-		font-size: 18px;
-		/* Smaller title on mobile */
-	}
+    .donation-card h3 {
+        font-size: 18px;
+        /* Smaller title on mobile */
+    }
 
-	.donation-card p {
-		font-size: 12px;
-		/* Smaller text on mobile */
-	}
+    .donation-card p {
+        font-size: 12px;
+        /* Smaller text on mobile */
+    }
 
-	.donation-card .btn {
-		padding: 8px;
-		/* Smaller button padding */
-	}
+    .donation-card .btn {
+        padding: 8px;
+        /* Smaller button padding */
+    }
 }
 
 /* styles.css */
 
 /* Styles specific to the About section */
 #about-us {
-	font-family: "Open Sans", sans-serif;
-	margin: 20px auto;
-	padding: 20px;
-	background-color: #EDE8F5;
-	border-radius: 8px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-	margin: 20px;
-	/* Restricts width to improve readability */
+    font-family: "Open Sans", sans-serif;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ede8f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    /* Restricts width to improve readability */
 }
 
 #about-us h1 {
-	font-size: 2.5em;
-	margin-bottom: 20px;
-	text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 #about-us h2 {
-	font-size: 1.8em;
-	margin-top: 20px;
-	margin-bottom: 10px;
-	border-bottom: 2px solid #007bff;
-	padding-bottom: 5px;
-	text-align: left;
-	padding-left: unset;
+    font-size: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    text-align: left;
+    padding-left: unset;
 }
 
 #about-us p {
-	line-height: 1.6;
-	margin-bottom: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 #about-us ul {
-	margin-bottom: 15px;
-	padding-left: 20px;
+    margin-bottom: 15px;
+    padding-left: 20px;
 }
 
 #about-us blockquote {
-	font-style: italic;
-	margin: 10px 0;
-	padding-left: 10px;
-	border-left: 5px solid #007bff;
-	background-color: #f0f8ff;
-	padding: 10px;
-	border-radius: 4px;
+    font-style: italic;
+    margin: 10px 0;
+    padding-left: 10px;
+    border-left: 5px solid #007bff;
+    background-color: #f0f8ff;
+    padding: 10px;
+    border-radius: 4px;
 }
 
 #about-us strong {
-	color: #007bff;
-	/* Highlighting team members */
+    color: #007bff;
+    /* Highlighting team members */
 }
 
 footer {
-	background-color: #2c3e50;
-	/* Dark background color */
-	color: #ecf0f1;
-	/* Light text color */
-	padding: 20px;
-	/* Spacing inside the footer */
-	text-align: center;
-	/* Center text alignment */
-	font-family: "Open Sans", sans-serif;
-	/* Font family */
-	position: relative;
-	/* Position for potential overlapping elements */
+    background-color: #2c3e50;
+    /* Dark background color */
+    color: #ecf0f1;
+    /* Light text color */
+    padding: 20px;
+    /* Spacing inside the footer */
+    text-align: center;
+    /* Center text alignment */
+    font-family: "Open Sans", sans-serif;
+    /* Font family */
+    position: relative;
+    /* Position for potential overlapping elements */
 }
 
 footer p {
-	margin: 8px 0;
-	/* Margin for spacing between paragraphs */
-	font-size: 14px;
-	/* Font size for paragraph text */
+    margin: 8px 0;
+    /* Margin for spacing between paragraphs */
+    font-size: 14px;
+    /* Font size for paragraph text */
 }
 
 .footer-links {
-	margin-top: 10px;
-	/* Spacing above the links */
+    margin-top: 10px;
+    /* Spacing above the links */
 }
 
 .footer-links a {
-	color: #ecf0f1;
-	/* Link color */
-	text-decoration: none;
-	/* Remove underline */
-	margin: 0 10px;
-	/* Spacing between links */
-	transition: color 0.3s;
-	/* Smooth transition for hover effect */
+    color: #ecf0f1;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline */
+    margin: 0 10px;
+    /* Spacing between links */
+    transition: color 0.3s;
+    /* Smooth transition for hover effect */
 }
 
 .footer-links a:hover {
-	color: #3498db;
-	/* Change color on hover */
+    color: #3498db;
+    /* Change color on hover */
 }
 
 /* Optional: Add responsive styles */
 @media (max-width: 600px) {
-	footer {
-		padding: 15px;
-		/* Reduce padding on smaller screens */
-	}
+    footer {
+        padding: 15px;
+        /* Reduce padding on smaller screens */
+    }
 
-	footer p {
-		font-size: 12px;
-		/* Smaller font size on mobile */
-	}
+    footer p {
+        font-size: 12px;
+        /* Smaller font size on mobile */
+    }
 
-	.footer-links {
-		flex-direction: column;
-		/* Stack links vertically */
-	}
+    .footer-links {
+        flex-direction: column;
+        /* Stack links vertically */
+    }
 
-	.footer-links a {
-		margin: 5px 0;
-		/* Margin for vertical links */
-	}
+    .footer-links a {
+        margin: 5px 0;
+        /* Margin for vertical links */
+    }
 }
 
 .events-header,
 .poojas-header {
-	flex-direction: column;
-	text-align: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .event-list,
 .card-container {
-	display: flex;
-	justify-content: center;
-	padding: 5%;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
 }
 
 .event-item {
-	border: 4px solid #3399cc;
-	border-radius: 20px;
-	padding: 10px;
+    border: 4px solid #3399cc;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .card {
-	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-	border-radius: 20px;
-	padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .events {
-	header {
-		background: #FBE9D0;
-	}
+    header {
+        background: #fbe9d0;
+    }
 }
 
 .poojas {
-	header {
-		background: #AFDDE5;
-	}
+    header {
+        background: #afdde5;
+    }
 
-	.card-container {
-		.card {
-			border: 6px solid #AFDDE5;
-			color: #964734;
-		}
-	}
+    .card-container {
+        .card {
+            border: 6px solid #afdde5;
+            color: #964734;
+        }
+    }
 }
 
 .contact-us-button {
-	background: var(--blue);
+    background: var(--blue);
+}
+
+.donation-header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background: #474b4f;
+    color: white;
+}
+
+.form-details {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background: rgba(27, 27, 50, 0.8);
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+        width: 80%;
+    }
+
+    input,
+    select {
+        display: block;
+        width: 100%;
+        height: 2.375rem;
+        padding: 0.375rem 0.75rem;
+        color: #495057;
+        background-color: silver;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        &::placeholder {
+            font-style: italic;
+        }
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        background: #37af65;
+        color: inherit;
+        border-radius: 2px;
+        cursor: pointer;
+        border: none;
+        color: white;
+    }
+}
+
+.donation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h2 {
+        padding: 20px;
+    }
+}
+
+.name-div,
+.mobile-num-div,
+.email-div,
+.gothara-div,
+.Nakshatra-div,
+.Raashi-div,
+.Donation-amount-div,
+.Donation-Cause-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+        color: #f3f3f3;
+        font-weight: bold;
+    }
+}
+
+.contact-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #9d8d9f;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+    @media (max-width: 1024px) {
+        width: 75%;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        label {
+            color: #f39102;
+            margin-bottom: 15px;
+        }
+    }
+    button {
+        font-size: 14px;
+        background-color: #fdd85f;
+        padding: 12px 26px;
+        border-radius: 40px;
+        width: 100%;
+        color: #3b4a67;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 16px;
+        box-shadow: 0 0 5px #f39102, 0 0 5px #f39102, 0 0 5px #f39102,
+            0 0 25px #f39102;
+    }
+    input,
+    textarea {
+        padding: 16px;
+        border-radius: 10px;
+        background: black;
+        border: none;
+        box-shadow: 0 0 5px #f39102, 0 0 5px #f39102, 0 0 5px #f39102,
+            0 0 25px #f39102;
+        margin-bottom: 16px;
+        color: white;
+        &::placeholder {
+            color: white;
+            opacity: 0.5;
+        }
+    }
+}
+
+.contact-form-container {
+    display: flex;
+    background: black;
+    justify-content: center;
+    padding: 5% 0;
+}
+
+.gallery-container {
+    h2 {
+        background: #a1c3d1;
+    }
 }
