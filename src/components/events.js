@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Events = () => {
     return (
         <div className="events">
-            <header>
+            <header className='events-header'>
                 <h1>Upcoming Events</h1>
                 <p>Join us for our upcoming spiritual and community events.</p>
             </header>

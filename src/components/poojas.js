@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Poojas = () => {
     return (
         <div className="poojas">
-            <header>
+            <header className='poojas-header'>
                 <h1>Pooja Services</h1>
                 <p>Explore our variety of pooja services offered to the community.</p>
             </header>
