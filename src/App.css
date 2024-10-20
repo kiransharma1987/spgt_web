@@ -31,7 +31,8 @@ body {
 
 /* Smooth Scrolling for In-Page Links */
 html {
-    scroll-behavior: smooth; /* Enables smooth scrolling for all anchor links */
+	scroll-behavior: smooth;
+	/* Enables smooth scrolling for all anchor links */
 }
 
 a {
@@ -91,8 +92,10 @@ header {
 
 				a {
 					display: inline-block;
-					padding: 10px 20px;
-					color: var(--base);
+					padding: 5px 10px;
+					color: #3E362E;
+					background: var(--yellow);
+					border-radius: 10px;
 
 					&:hover {
 						background-color: var(--base-100);
@@ -108,7 +111,7 @@ header {
 			color: var(--base-800);
 			padding: 10px;
 
-			@media (max-width:768px) {
+			@media (max-width: 768px) {
 				display: inline-block;
 				position: absolute;
 				top: 20px;
@@ -155,7 +158,7 @@ section {
 	margin-top: 30px;
 	margin-bottom: 30px;
 
-	@media (max-width:1440px) {
+	@media (max-width: 1440px) {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
@@ -205,7 +208,7 @@ h1 {
 		font-weight: 100;
 	}
 
-	@media (max-width:1024px) {
+	@media (max-width: 1024px) {
 		font-size: 48px;
 	}
 }
@@ -213,7 +216,7 @@ h1 {
 .hero {
 	display: flex;
 
-	@media (max-width:1024px) {
+	@media (max-width: 1024px) {
 		flex-direction: column;
 	}
 
@@ -227,7 +230,7 @@ h1 {
 		justify-content: center;
 
 		span {
-			@media (max-width:768px) {
+			@media (max-width: 768px) {
 				display: none;
 			}
 		}
@@ -283,7 +286,7 @@ h2 {
 		color: var(--base);
 	}
 
-	@media (max-width:1024px) {
+	@media (max-width: 1024px) {
 		font-size: 48px;
 	}
 }
@@ -303,7 +306,7 @@ h3 {
 		padding: 30px;
 		display: flex;
 
-		@media(max-width:1024px) {
+		@media (max-width: 1024px) {
 			flex-direction: column;
 		}
 
@@ -341,7 +344,7 @@ h3 {
 		display: flex;
 		gap: 30px;
 
-		@media(max-width:1024px) {
+		@media (max-width: 1024px) {
 			flex-direction: column;
 		}
 
@@ -406,7 +409,6 @@ h3 {
 						transform: scale(1.2);
 					}
 				}
-
 			}
 		}
 	}
@@ -420,11 +422,11 @@ h3 {
 		grid-template-rows: repeat(4, 1fr);
 		height: 960px;
 
-		@media(max-width:1024px) {
+		@media (max-width: 1024px) {
 			grid-template-rows: repeat(8, 1fr);
 		}
 
-		@media(max-width:768px) {
+		@media (max-width: 768px) {
 			display: flex;
 			flex-direction: column;
 			gap: 30px;
@@ -453,7 +455,7 @@ h3 {
 				}
 			}
 
-			@media(max-width:768px) {
+			@media (max-width: 768px) {
 				height: 240px;
 			}
 
@@ -461,7 +463,7 @@ h3 {
 				grid-column: span 2;
 				grid-row: span 2;
 
-				@media(max-width:1024px) {
+				@media (max-width: 1024px) {
 					grid-column: span 2;
 					grid-row: span 2;
 				}
@@ -471,7 +473,7 @@ h3 {
 				grid-column: span 2;
 				grid-row: span 1;
 
-				@media(max-width:1024px) {
+				@media (max-width: 1024px) {
 					grid-column: span 3;
 					grid-row: span 2;
 				}
@@ -481,7 +483,7 @@ h3 {
 				grid-column: span 1;
 				grid-row: span 1;
 
-				@media(max-width:1024px) {
+				@media (max-width: 1024px) {
 					grid-column: span 3;
 					grid-row: span 2;
 				}
@@ -491,7 +493,7 @@ h3 {
 				grid-column: span 1;
 				grid-row: span 1;
 
-				@media(max-width:1024px) {
+				@media (max-width: 1024px) {
 					grid-column: span 2;
 					grid-row: span 4;
 				}
@@ -501,7 +503,7 @@ h3 {
 				grid-column: span 2;
 				grid-row: span 1;
 
-				@media(max-width:1024px) {
+				@media (max-width: 1024px) {
 					grid-column: span 3;
 					grid-row: span 2;
 				}
@@ -511,7 +513,7 @@ h3 {
 				grid-column: span 5;
 				grid-row: span 3;
 
-				@media(max-width:1024px) {
+				@media (max-width: 1024px) {
 					grid-column: span 5;
 					grid-row: span 2;
 				}
@@ -528,7 +530,7 @@ h3 {
 		gap: 30px;
 		display: flex;
 
-		@media (max-width:1024px) {
+		@media (max-width: 1024px) {
 			flex-direction: column;
 		}
 
@@ -584,7 +586,7 @@ h3 {
 							align-items: center;
 							justify-content: center;
 
-							@media(max-width:768px) {
+							@media (max-width: 768px) {
 								width: 48px;
 								height: 48px;
 							}
@@ -710,7 +712,7 @@ h3 {
 }
 
 .card-button {
-	background-color: #4CAF50;
+	background-color: #4caf50;
 	/* Button color */
 	color: #fff;
 	/* Text color */
@@ -839,7 +841,7 @@ h3 {
 
 /* Button styles */
 .pooja-card .btn {
-	background-color: #4CAF50;
+	background-color: #4caf50;
 	/* Green background for button */
 	color: #fff;
 	/* White text color */
@@ -994,7 +996,7 @@ h3 {
 
 /* Button styles */
 .donation-card .btn {
-	background-color: #4CAF50;
+	background-color: #4caf50;
 	/* Green background for button */
 	color: #fff;
 	/* White text color */
@@ -1032,38 +1034,59 @@ h3 {
 
 /* Scroll to Top Button Styles */
 #scrollTopBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed position */
-    bottom: 30px; /* 30px from the bottom */
-    right: 30px; /* 30px from the right */
-    z-index: 1000; /* Ensure it's above other elements */
-    font-size: 24px; /* Size of the arrow */
-    background-color: var(--blue); /* Background color */
-    color: var(--base-100); /* Arrow color */
-    padding: 15px; /* Padding around the arrow */
-    border-radius: 50%; /* Circular button */
-    text-align: center; /* Center the arrow */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transitions */
-    opacity: 0; /* Transparent by default */
-    visibility: hidden; /* Hidden by default */
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Fixed position */
+	bottom: 30px;
+	/* 30px from the bottom */
+	right: 30px;
+	/* 30px from the right */
+	z-index: 1000;
+	/* Ensure it's above other elements */
+	font-size: 24px;
+	/* Size of the arrow */
+	background-color: var(--blue);
+	/* Background color */
+	color: var(--base-100);
+	/* Arrow color */
+	padding: 15px;
+	/* Padding around the arrow */
+	border-radius: 50%;
+	/* Circular button */
+	text-align: center;
+	/* Center the arrow */
+	cursor: pointer;
+	/* Pointer cursor on hover */
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+	/* Smooth transitions */
+	opacity: 0;
+	/* Transparent by default */
+	visibility: hidden;
+	/* Hidden by default */
 }
 
 #scrollTopBtn.show {
-    display: block; /* Show the button */
-    opacity: 0.7; /* Slightly visible */
-    visibility: visible; /* Make it visible */
+	display: block;
+	/* Show the button */
+	opacity: 0.7;
+	/* Slightly visible */
+	visibility: visible;
+	/* Make it visible */
 }
 
 #scrollTopBtn:hover {
-    background-color: var(--blue-800); /* Darker background on hover */
-    opacity: 1; /* Fully opaque on hover */
+	background-color: var(--blue-800);
+	/* Darker background on hover */
+	opacity: 1;
+	/* Fully opaque on hover */
 	text-decoration: none;
 }
 
 /* Optional: Style the Font Awesome icon */
 #scrollTopBtn i {
-    pointer-events: none; /* Allows click through the icon to the parent */
+	pointer-events: none;
+	/* Allows click through the icon to the parent */
 }
 
 /* Responsive design */
@@ -1102,97 +1125,167 @@ h3 {
 
 /* Styles specific to the About section */
 #about-us {
-  font-family: 'Open Sans', sans-serif;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 800px; /* Restricts width to improve readability */
+	font-family: "Open Sans", sans-serif;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #EDE8F5;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	margin: 20px;
+	/* Restricts width to improve readability */
 }
 
 #about-us h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  text-align: center;
+	font-size: 2.5em;
+	margin-bottom: 20px;
+	text-align: center;
 }
 
 #about-us h2 {
-  font-size: 1.8em;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 5px;
+	font-size: 1.8em;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #007bff;
+	padding-bottom: 5px;
+	text-align: left;
+	padding-left: unset;
 }
 
 #about-us p {
-  line-height: 1.6;
-  margin-bottom: 15px;
+	line-height: 1.6;
+	margin-bottom: 15px;
 }
 
 #about-us ul {
-  margin-bottom: 15px;
-  padding-left: 20px;
+	margin-bottom: 15px;
+	padding-left: 20px;
 }
 
 #about-us blockquote {
-  font-style: italic;
-  margin: 10px 0;
-  padding-left: 10px;
-  border-left: 5px solid #007bff;
-  background-color: #f0f8ff;
-  padding: 10px;
-  border-radius: 4px;
+	font-style: italic;
+	margin: 10px 0;
+	padding-left: 10px;
+	border-left: 5px solid #007bff;
+	background-color: #f0f8ff;
+	padding: 10px;
+	border-radius: 4px;
 }
 
 #about-us strong {
-  color: #007bff; /* Highlighting team members */
+	color: #007bff;
+	/* Highlighting team members */
 }
 
 footer {
-  background-color: #2C3E50; /* Dark background color */
-  color: #ECF0F1; /* Light text color */
-  padding: 20px; /* Spacing inside the footer */
-  text-align: center; /* Center text alignment */
-  font-family: 'Open Sans', sans-serif; /* Font family */
-  position: relative; /* Position for potential overlapping elements */
+	background-color: #2c3e50;
+	/* Dark background color */
+	color: #ecf0f1;
+	/* Light text color */
+	padding: 20px;
+	/* Spacing inside the footer */
+	text-align: center;
+	/* Center text alignment */
+	font-family: "Open Sans", sans-serif;
+	/* Font family */
+	position: relative;
+	/* Position for potential overlapping elements */
 }
 
 footer p {
-  margin: 8px 0; /* Margin for spacing between paragraphs */
-  font-size: 14px; /* Font size for paragraph text */
+	margin: 8px 0;
+	/* Margin for spacing between paragraphs */
+	font-size: 14px;
+	/* Font size for paragraph text */
 }
 
 .footer-links {
-  margin-top: 10px; /* Spacing above the links */
+	margin-top: 10px;
+	/* Spacing above the links */
 }
 
 .footer-links a {
-  color: #ECF0F1; /* Link color */
-  text-decoration: none; /* Remove underline */
-  margin: 0 10px; /* Spacing between links */
-  transition: color 0.3s; /* Smooth transition for hover effect */
+	color: #ecf0f1;
+	/* Link color */
+	text-decoration: none;
+	/* Remove underline */
+	margin: 0 10px;
+	/* Spacing between links */
+	transition: color 0.3s;
+	/* Smooth transition for hover effect */
 }
 
 .footer-links a:hover {
-  color: #3498DB; /* Change color on hover */
+	color: #3498db;
+	/* Change color on hover */
 }
 
 /* Optional: Add responsive styles */
 @media (max-width: 600px) {
-  footer {
-      padding: 15px; /* Reduce padding on smaller screens */
-  }
+	footer {
+		padding: 15px;
+		/* Reduce padding on smaller screens */
+	}
 
-  footer p {
-      font-size: 12px; /* Smaller font size on mobile */
-  }
+	footer p {
+		font-size: 12px;
+		/* Smaller font size on mobile */
+	}
 
-  .footer-links {
-      flex-direction: column; /* Stack links vertically */
-  }
+	.footer-links {
+		flex-direction: column;
+		/* Stack links vertically */
+	}
 
-  .footer-links a {
-      margin: 5px 0; /* Margin for vertical links */
-  }
+	.footer-links a {
+		margin: 5px 0;
+		/* Margin for vertical links */
+	}
+}
+
+.events-header,
+.poojas-header {
+	flex-direction: column;
+	text-align: center;
+}
+
+.event-list,
+.card-container {
+	display: flex;
+	justify-content: center;
+	padding: 5%;
+}
+
+.event-item {
+	border: 4px solid #3399cc;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.card {
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.events {
+	header {
+		background: #FBE9D0;
+	}
+}
+
+.poojas {
+	header {
+		background: #AFDDE5;
+	}
+
+	.card-container {
+		.card {
+			border: 6px solid #AFDDE5;
+			color: #964734;
+		}
+	}
+}
+
+.contact-us-button {
+	background: var(--blue);
 }
