@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/spgt_web/static/css/main.c90b4879.css",
-    "main.js": "/spgt_web/static/js/main.e3f12f0f.js",
+    "main.js": "/spgt_web/static/js/main.97431912.js",
     "static/js/453.f3e7db58.chunk.js": "/spgt_web/static/js/453.f3e7db58.chunk.js",
     "static/media/g3.png": "/spgt_web/static/media/g3.f014379976d7c4182596.png",
     "static/media/1.jpg": "/spgt_web/static/media/1.63b3b8b47e078ae4f82f.jpg",
@@ -13,14 +13,14 @@
     "static/media/4.jpg": "/spgt_web/static/media/4.2f7ee42fd862af2fff62.jpg",
     "static/media/9.jpg": "/spgt_web/static/media/9.b2a3fa8da663f5a622fa.jpg",
     "static/media/2.jpg": "/spgt_web/static/media/2.cabfc5b455d7fa4bb260.jpg",
-    "static/media/spgt.png": "/spgt_web/static/media/spgt.78d778215a167b32fea7.png",
+    "static/media/spgt.svg": "/spgt_web/static/media/spgt.75fee26c97a79f7ac294664b621448a3.svg",
     "index.html": "/spgt_web/index.html",
     "main.c90b4879.css.map": "/spgt_web/static/css/main.c90b4879.css.map",
-    "main.e3f12f0f.js.map": "/spgt_web/static/js/main.e3f12f0f.js.map",
+    "main.97431912.js.map": "/spgt_web/static/js/main.97431912.js.map",
     "453.f3e7db58.chunk.js.map": "/spgt_web/static/js/453.f3e7db58.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c90b4879.css",
-    "static/js/main.e3f12f0f.js"
+    "static/js/main.97431912.js"
   ]
 }
