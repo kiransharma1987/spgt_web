@@ -7,7 +7,7 @@ import Donations from './components/donations';
 import Poojas from './components/poojas';
 import Events from './components/events';
 import Contact from './components/contact';
-import templeLogo from '../src/gallery/spgt.png'; // Assuming logo is in gallery folder
+import templeLogo from '../src/gallery/spgt.svg'; // Assuming logo is in gallery folder
 import Gallery from './components/gallery';
 
 const App = () => {
