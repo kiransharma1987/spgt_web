@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/home';
@@ -7,53 +7,57 @@ import Donations from './components/donations';
 import Poojas from './components/poojas';
 import Events from './components/events';
 import Contact from './components/contact';
-import templeLogo from '../src/gallery/spgt.svg'; // Assuming logo is in gallery folder
+import templeLogo from '../src/spgt_logo.svg'; // Assuming logo is in gallery folder
 import Gallery from './components/gallery';
 
 const App = () => {
+
+  const [activeNavItem, setActiveNavItem] = useState('/');
+
   // Function to toggle the mobile menu
   const toggleMobileMenu = () => {
     document.getElementById("menu").classList.toggle("active");
+  };
+
+  // Function to handle nav item click
+  const handleNavClick = (path) => {
+    setActiveNavItem(path);
   };
   return (
     <Router>
       <div>
         {/* Header */}
-        <header>
-          <a href="#" className="logo-holder">
-            <div className="logo"><img src={templeLogo} width="64px" alt="Sri Prasanna Ganapathi Logo" /></div>
-            <div className="logo-text">Sri Prasanna Ganapathi Seva Charitable Trust</div>
-          </a>
-          <nav>
-            <ul id="menu">
-              <li><Link to="/"><a href="#">Home</a></Link>
-              </li>
-              <li>
-                <Link to="/about"><a href="#aboutUS">About Us</a></Link>
-              </li>
-              <li>
-                <Link to="/events"><a href="#events">Events</a></Link>
-              </li>
-              <li>
-                <Link to="/poojas"><a href="#poojas">Poojas</a></Link>
-              </li>
-              <li>
-                <Link to="/donations"><a href="#donations">Donations</a></Link>
-              </li>
-              <li>
-                <Link to="/gallery"><a href="#gallery">Gallery</a></Link>
-              </li>
-              <li>
-                <Link className="contact-us-button" to="/contact"><a href="#" className="button">Contact Us</a></Link>
-              </li>
-            </ul>
-            <a href="#" className="mobile-toggle" onClick={toggleMobileMenu}>
-              <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h10" />
-              </svg>
-            </a>
-          </nav>
+        <header className="header">
+          <div className="header_inner">
+            <div className="logo-container">
+              <img src={templeLogo} alt="SPGT logo" />
+              <div className="logo-text">Sri Prasanna Ganapathi Seva Charitable Trust</div>
+              <div className="logo-text-right">Mob: +91 1234567890</div>
+            </div>
+            <nav className="shift">
+              <ul>
+                {[
+                  { path: '/', label: 'Home' },
+                  { path: '/aboutUS', label: 'About us' },
+                  { path: '/events', label: 'Events' },
+                  { path: '/poojas', label: 'Pooje' },
+                  { path: '/donations', label: 'Donations' },
+                  { path: '/gallery', label: 'Gallery' },
+                  { path: '/contact', label: 'Contact us' },
+                ].map(({ path, label }) => (
+                  <li key={path} className="nav-item">
+                    <Link
+                      to={path}
+                      className={activeNavItem === path ? 'active' : ''}
+                      onClick={() => handleNavClick(path)}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </header>
 
         {/* Routes */}
