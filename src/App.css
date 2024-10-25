@@ -106,3 +106,15 @@ nav {
   nav ul li a.active {
     background: var(--nav-hover-bg-color);
 }
+footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background-color: var(--nav-bar-bg-color);
+    color: var(--nav-text-color);
+    text-align: center; /* Center the text */
+    padding: 10px 0; /* Add some padding */
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

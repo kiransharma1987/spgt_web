@@ -72,14 +72,7 @@ const App = () => {
         </Routes>
         {/* Footer */}
         <footer>
-          <p>Contact Info: 123 Temple Road, Bangalore, India</p>
-          <p>Email: info@temple.org | Phone: +91 9876543210</p>
-          <p>Follow us: Facebook | Instagram</p>
-          <div className="footer-links">
-            <Link to="/sitemap">Sitemap</Link>
-            <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/terms">Terms & Conditions</Link>
-          </div>
+          <p>Copyright © 2024 Sri Prasanna Ganapathi Seva Charitable Trust. All rights reserved.</p>
         </footer>
       </div>
     </Router>
